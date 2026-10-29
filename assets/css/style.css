@@ -1154,3 +1154,56 @@ body::before {
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero__scroll::after { animation: none; }
 }
+
+/* ===== 追加：视频嵌入 ===== */
+.video-embed {
+  margin-top: 22px;
+  border: 1px solid rgba(176, 138, 74, .35);
+  background: #14100c;
+  padding: 10px;
+}
+.video-embed iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+.video-embed__cap {
+  margin: 10px 2px 2px;
+  font-size: 12.5px;
+  letter-spacing: .04em;
+  color: rgba(244, 239, 228, .55);
+}
+.section:not(.section--dark) .video-embed { background: #1c1712; }
+
+/* ===== 追加：法条详细卡片 ===== */
+.law-grid {
+  margin: 26px 0 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+.law-item {
+  border: 1px solid rgba(143, 33, 25, .18);
+  background: #fdfaf3;
+  padding: 18px 20px;
+}
+.law-item h4 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: var(--ink, #2b241c);
+}
+.law-item h4 small {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #8f2119;
+  letter-spacing: .06em;
+}
+.law-item p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: #4a4239;
+}

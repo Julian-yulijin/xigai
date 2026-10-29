@@ -27,7 +27,8 @@ jobs:
       - name: Stage site files
         run: |
           mkdir -p _site
-          cp -r index.html exchange.html security.html assets _site/
+          cp *.html _site/
+          cp -r assets _site/
           cp .nojekyll _site/ 2>/dev/null || true
 
       - name: Configure Pages
