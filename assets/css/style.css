@@ -1207,3 +1207,64 @@ body::before {
   line-height: 1.85;
   color: #4a4239;
 }
+
+/* ---------- 扫码分享 ---------- */
+.qr-share {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.qr-share__text h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.qr-share__text p {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 15px;
+  line-height: 1.95;
+  color: rgba(18, 16, 15, 0.72);
+}
+
+.qr-share__card {
+  justify-self: end;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 16px 16px 12px;
+  background: #fff;
+  border: 1px solid var(--ink-line);
+  box-shadow: 0 16px 38px rgba(18, 16, 15, 0.09);
+}
+
+.qr-share__card img {
+  display: block;
+  width: 220px;
+  height: 220px;
+}
+
+.qr-share__card span {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(18, 16, 15, 0.52);
+}
+
+@media (max-width: 860px) {
+  .qr-share {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .qr-share__card {
+    justify-self: start;
+  }
+}
